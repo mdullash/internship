@@ -12,6 +12,7 @@
 <body>
 <div class="container p-5">
 <form method="post" action="">
+    @csrf
     <div class="form-group">
         <label for="">Campaign Title</label>
         <input type="text" name="title" class="form-control" id="" placeholder="Campaign Title">
