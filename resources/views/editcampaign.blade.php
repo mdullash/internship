@@ -34,7 +34,7 @@
         @endforeach
 
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/showcampaign">Show List</a>
+        <a class="btn" href="/showcampaign">Show List</a>
     </form>
 </div>
 

@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="container p-5">
+    <a class="btn" href="campaign">Add Campaign</a>
     <table class="table table-striped">
         <thead>
         <th>Campaign Title</th>
