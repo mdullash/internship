@@ -20,5 +20,6 @@ Route::get('campaign','CampaignController@index')->name('campaign');
 Route::get('showcampaign','CampaignController@show')->name('show');
 Route::post('campaign','CampaignController@store');
 Route::get('edit/{id}','CampaignController@edit')->name('edit');
+Route::put('edit/{id}','CampaignController@update')->name('update');
 Route::delete('delete/{id}','CampaignController@delete')->name('delete');
 

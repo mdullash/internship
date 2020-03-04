@@ -14,9 +14,10 @@
     <form method="post" action="">
         @csrf
         @foreach($cam as $c)
+
         <div class="form-group">
             <label for="">Campaign Title</label>
-            <input type="text" name="title" class="form-control" id="" value="{{$c->campaign_title}}" placeholder="Campaign Title">
+            <input type="text" name="title" class="form-control" id="" value="{{$c['campaign_title']}}" placeholder="Campaign Title">
         </div>
         <div class="form-group">
             <select class="form-control" id="" name="sender">
@@ -28,14 +29,12 @@
         </div>
         <div class="form-group">
             <label for="">Message</label>
-            <input type="text" name="message" class="form-control" id="" value="{{}}" placeholder="Message">
+            <input type="text" name="message" class="form-control" id="" value="{{$c->message_body}}" placeholder="Message">
         </div>
         @endforeach
-        <div class="form-group">
-            <label for="">Recipient Number</label>
-            <input type="text" name="number" class="form-control" id="" value="{{}}" placeholder="Number">
-        </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/showcampaign">Show List</a>
     </form>
 </div>
 

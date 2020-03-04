@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCampaignsTable extends Migration
+class CreateRecipientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateCampaignsTable extends Migration
      */
     public function up()
     {
-        Schema::create('campaigns', function (Blueprint $table) {
+        Schema::create('recipients', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('campaign_title');
-            $table->string('sender');
-            $table->string('message_body');
+            $table->int('campaign_id');
+            $table->string('recipient_number');
+            $table->Status('id');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateCampaignsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('campaigns');
+        Schema::dropIfExists('recipients');
     }
 }

@@ -37,10 +37,24 @@ class CampaignController extends Controller
         return redirect()->route('campaign');
 
     }
-    public function edit() {
+    public function edit($id) {
+        $cd = Campaign::find($id)->get();
+        //dd($cd);
+        return view('editcampaign')->with('cam',$cd);
 
     }
-    public function delete(Request $req) {
+    public function update(Request $req,$id) {
+        $c = Campaign::find($id);
+        $c->campaign_title=$req->title;
+        $c->sender=$req->title;
+        $c->message_body=$req->message;
+        $c->save();
+        return redirect()->route('show');
+    }
+    public function delete($id) {
+        $c = Campaign::find($id);
 
+        $c->delete();
+        return redirect()->route('show');
     }
 }
